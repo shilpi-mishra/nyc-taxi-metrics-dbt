@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "dbt-studio": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "c:\\Users\\shilp\\.vscode\\extensions\\nickeolofsson.dbt-studio-vscode-0.1.14\\dist\\mcp-proxy.js",
+        "--workspace",
+        "C:\\VSC\\nyc_taxi_metrics"
+      ]
+    }
+  }
+}

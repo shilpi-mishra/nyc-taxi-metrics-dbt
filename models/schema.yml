@@ -1,0 +1,42 @@
+version: 2
+
+models:
+
+  - name: bronze_taxi
+    description: "Raw data ingested from source"
+
+  - name: silver_taxi
+    description: "Cleaned and transformed data ready for analysis"
+    columns:
+      - name: pickup_time
+        description: "pickup timestamp of the taxi trip"
+        tests:
+          - not_null
+      - name: fare_amount
+        description: ""
+        tests:
+          - not_null
+      - name: trip_distance
+        description: "trip distance in miles"
+        tests:
+          - not_null
+
+  - name: gold_taxi_metrics
+    description: ""
+    columns:
+      - name: trip_date
+        description: "trip date of the taxi trip"
+        tests:
+          - not_null
+      - name: trip_hour
+        description: ""
+        tests:
+          - not_null
+      - name: total_trips
+        description: ""
+        tests:
+          - not_null
+      - name: avg_fare_amount
+        description: "A"
+        tests:
+          - not_null

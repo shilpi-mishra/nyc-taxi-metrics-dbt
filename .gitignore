@@ -1,0 +1,13 @@
+
+target/
+dbt_packages/
+logs/
+dbt_internal_packages/
+packages/
+profiles.yml
+
+# Python virtual environment
+shil_venv/
+.venv/
+_pycache__/
+*.pyc
