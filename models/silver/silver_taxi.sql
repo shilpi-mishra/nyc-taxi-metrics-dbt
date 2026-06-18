@@ -12,8 +12,7 @@ SELECT
 -- Derived columns
     ROUND(
         (UNIX_TIMESTAMP(tpep_dropoff_datetime)
-       - UNIX_TIMESTAMP(tpep_pickup_datetime)) / 60.0,
-    2)                                        AS trip_duration_mins
+       - UNIX_TIMESTAMP(tpep_pickup_datetime)) / 60.0,2)   AS trip_duration_mins
 FROM {{ ref('bronze_taxi') }}
 -- Data quality filters
 WHERE fare_amount    > 0

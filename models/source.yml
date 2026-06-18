@@ -7,6 +7,11 @@ sources:
     tables:
       - name: trips
         description: "Raw NYC Yellow Taxi trip data from Databricks samples catalog"
+        loaded_at_field: tpep_pickup_datetime
+        freshness:
+          error_after: 
+            count: 365
+            period: day
         columns:
           - name: tpep_pickup_datetime
             description: "Pickup timestamp"
